@@ -1,0 +1,597 @@
+{
+	"info": {
+		"_postman_id": "358b26a0-1395-4c1d-a658-4c338445c62e",
+		"name": "momentumproject",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"newmentor\",\r\n    \"email\":\"devanshmentor@gmail.com\",\r\n    \"password\":\"123456\",\r\n    \"role\":\"mentor\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"mentor@gmail.com\",\r\n    \"password\":\"123456\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit Question",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJzdHVkZW50QGdtYWlsLmNvbSIsImlhdCI6MTc2NzQ0OTY4MywiZXhwIjoxNzk5MDA3MjgzfQ.zkSz59McMDtee2feWoFQjxn1gRyFSZn2rp0k8TVglWg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"text\": \"What is the best roadmap to become a full stack developer in 2025?\",\r\n  \"team\": \"Career Counselling\",\r\n  \"estimated_time\": \"48 hours\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/questions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"questions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Question",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJzdHVkZW50QGdtYWlsLmNvbSIsImlhdCI6MTc2NzQ0OTY4MywiZXhwIjoxNzk5MDA3MjgzfQ.zkSz59McMDtee2feWoFQjxn1gRyFSZn2rp0k8TVglWg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3001/api/questions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"questions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Team",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJjb29yZGluYXRvckBnbWFpbC5jb20iLCJpYXQiOjE3Njc0MzkxODYsImV4cCI6MTc5ODk5Njc4Nn0.PJFbLagyvw1YpwcrKdVnXSNx3Y1IttZ0GRc27W6XQTQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Research Team\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/teams",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"teams"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mentor Assigned Questions",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJtZW50b3JAZ21haWwuY29tIiwiaWF0IjoxNzY3NTA0MDY4LCJleHAiOjE3OTkwNjE2Njh9.FBqn-ONZmu25W4Lhs8b-ODD8fnpU2goanUKKRvfc_ks",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3001/api/questions/mentor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"questions",
+						"mentor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Teams",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJjb29yZGluYXRvckBnbWFpbC5jb20iLCJpYXQiOjE3Njc1ODY5MzEsImV4cCI6MTc5OTE0NDUzMX0.TTX72WH-rrfg-Lg43_7W3F_RZ_tjCIwzOVIw35h96bw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3001/api/teams",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"teams"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Mentor",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJjb29yZGluYXRvckBnbWFpbC5jb20iLCJpYXQiOjE3Njc2MTMxNTQsImV4cCI6MTc5OTE3MDc1NH0.15LyGIenXD6ctbLjKSwGezctu6xWfoOmmJzt5LYKP0w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Mentor 223\"\r\n    \"email\":\"mentor223@gmail.com\"\r\n    \"password\":\"123456\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/mentors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"mentors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Mentors",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJjb29yZGluYXRvckBnbWFpbC5jb20iLCJpYXQiOjE3Njc1OTA4MjgsImV4cCI6MTc5OTE0ODQyOH0.XI0c2OFcLe_Kr9XlbqQ_7lCn_SUnQQMRs_1itKJl9-U",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3001/api/mentors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"mentors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Students",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJjb29yZGluYXRvckBnbWFpbC5jb20iLCJpYXQiOjE3Njc2MTMxNTQsImV4cCI6MTc5OTE3MDc1NH0.15LyGIenXD6ctbLjKSwGezctu6xWfoOmmJzt5LYKP0w",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3001/api/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Questions",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJjb29yZGluYXRvckBnbWFpbC5jb20iLCJpYXQiOjE3Njc2NzI2MDIsImV4cCI6MTc5OTIzMDIwMn0.ByCikgEg_JO-1cyvuk05CvwXPjATdn0Fayk4nd1YMMU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3001/api/students/5/questions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"students",
+						"5",
+						"questions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit Answer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJjb29yZGluYXRvckBnbWFpbC5jb20iLCJpYXQiOjE3Njc2NzI2MDIsImV4cCI6MTc5OTIzMDIwMn0.ByCikgEg_JO-1cyvuk05CvwXPjATdn0Fayk4nd1YMMU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"answer_text\": \"This is the final solution to your question.\",\r\n  \"answer_attachment\": \"https://example.com/solution.pdf\",\r\n  \"answer_status\": \"published\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/questions/5/answer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"questions",
+						"5",
+						"answer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Answer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJjb29yZGluYXRvckBnbWFpbC5jb20iLCJpYXQiOjE3Njc2NzI2MDIsImV4cCI6MTc5OTIzMDIwMn0.ByCikgEg_JO-1cyvuk05CvwXPjATdn0Fayk4nd1YMMU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"answer_text\": \"This is the final solution to your question. Testing update\",\r\n  \"answer_attachment\": \"https://example.com/solution.pdf\",\r\n  \"answer_status\": \"published\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/questions/5/answer/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"questions",
+						"5",
+						"answer",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch All Questions",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJjb29yZGluYXRvckBnbWFpbC5jb20iLCJpYXQiOjE3Njc3NzQzODEsImV4cCI6MTc5OTMzMTk4MX0.KXRWeXxQIGGiliXlP4SviO2Fp-VCAq6CMFoxQDotaeU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3001/api/questions/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"questions",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mentor Onboarding",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJtZW50b3JAZ21haWwuY29tIiwiaWF0IjoxNzY4MTE5NDQzLCJleHAiOjE3OTk2NzcwNDN9.cQtj3FIzJlf6o1N1uW0kdR9MtbnBke11frMV3dCslbo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"bio\": \"This is testing phase for mentor\",\r\n  \"escalation_type\": \"calendly\",\r\n  \"escalation_value\": \"https://calendly.com/xyz\",\r\n  \"mentoring_focus\": [\"research\", \"career\"]\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/mentor/onboarding",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"mentor",
+						"onboarding"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mentor Status",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJtZW50b3JAZ21haWwuY29tIiwiaWF0IjoxNzY4MTE5NDQzLCJleHAiOjE3OTk2NzcwNDN9.cQtj3FIzJlf6o1N1uW0kdR9MtbnBke11frMV3dCslbo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3001/api/mentor/status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"mentor",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Training Next",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJtZW50b3JAZ21haWwuY29tIiwiaWF0IjoxNzY4MTI2ODgxLCJleHAiOjE3OTk2ODQ0ODF9.9GsgAcd4yDgkH0BV8ZRJ0YHp6BuSc7A3OjkUO-6VCrA"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"system_card\": \"System training instructions here\",\r\n  \"expert_card\": \"Mentor expert card content here\",\r\n  \"prompt\": \"Generate realistic student question and mentor-style answer\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/training/next",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"training",
+						"next"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
